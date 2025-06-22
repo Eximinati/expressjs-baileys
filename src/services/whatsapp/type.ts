@@ -9,23 +9,23 @@ export interface Attachment {
 export enum ConnectionState {
     'idle',
     'disconnected',
-    'connected'
+    'connected',
 }
-  
+
 export interface PreparedPhotoFile {
     type: string;
-    image: Buffer
+    image: Buffer;
 }
-  
+
 export interface PreparedVideoFile {
     type: string;
     video: Buffer;
-    jpegThumbnail: string
+    jpegThumbnail: string;
 }
-  
+
 export interface PreparedDocumentFile {
     type: string;
     document: Buffer;
     mimetype: string;
-    fileName: string
+    fileName: string;
 }

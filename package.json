@@ -17,9 +17,9 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "npx nodemon",
-    "start": "npx nodemon",
     "build": "rm -rf dist && ./node_modules/@vercel/ncc/dist/ncc/cli.js build -m -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "prettier --config .prettierrc \"src/**/*.ts\" --write"
   },
   "devDependencies": {
     "@types/bull": "^4.10.0",
@@ -36,6 +36,7 @@
   "dependencies": {
     "@hapi/boom": "^10.0.1",
     "@netlify/functions": "^2.7.0",
+    "@typegoose/typegoose": "^12.17.0",
     "@whiskeysockets/baileys": "^6.6.0",
     "axios": "^1.7.2",
     "bull": "^4.12.2",
@@ -45,6 +46,8 @@
     "express-validator": "^7.0.1",
     "libphonenumber-js": "^1.10.58",
     "link-preview-js": "^3.0.5",
+    "mongoose": "^8.16.0",
+    "prettier": "^3.5.3",
     "qrcode": "^1.5.3",
     "serverless-http": "^3.2.0",
     "sharp": "^0.32.6",
