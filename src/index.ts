@@ -16,7 +16,7 @@ import { Attachment } from './services/whatsapp/type';
 import { replaceHtmlEntities, timeout } from './utils';
 
 dotenv.config();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5320;
 const app = express()
 
 const { combine, timestamp, prettyPrint, colorize, errors,  } = format; 
@@ -255,7 +255,6 @@ const runExpressServer = async () => {
             return res.status(400).json(typeof e === 'string' ? e : 'failed check connection')
         }
     })
-
     app.post('/send-text-message',
       body('phone_number').notEmpty().escape(),
       body('message').notEmpty().escape(),
